@@ -69,8 +69,8 @@
                 </li>
                 <li>
                   <p>
-                    Nos adentramos en todos los detalles y Procesos de su
-                    negocio, para asi desarrollar una solución a su medida.
+                    Nos adentramos en todos los detalles y Procesos de su negocio, para asi
+                    desarrollar una solución a su medida.
                   </p>
                 </li>
               </ul>
@@ -87,9 +87,8 @@
                 </li>
                 <li></li>
                 <p>
-                  Con nosotros, usted puede sentirse seguro y protegido. Un
-                  principio importante de la empresa: respetar su tiempo y
-                  respetar los plazos acordados.
+                  Con nosotros, usted puede sentirse seguro y protegido. Un principio importante de
+                  la empresa: respetar su tiempo y respetar los plazos acordados.
                 </p>
               </ul>
             </li>
@@ -105,8 +104,8 @@
                 </li>
                 <li>
                   <p>
-                    Usted podrá observar y participar en cada fase del
-                    desarrollo y aplicación de soluciones.
+                    Usted podrá observar y participar en cada fase del desarrollo y aplicación de
+                    soluciones.
                   </p>
                 </li>
               </ul>
@@ -123,8 +122,8 @@
                 </li>
                 <li>
                   <p>
-                    Usamos Herramientas innovadoras para resolver las tareas
-                    asignadas. Es hora de simplificar los procesos laborales.
+                    Usamos Herramientas innovadoras para resolver las tareas asignadas. Es hora de
+                    simplificar los procesos laborales.
                   </p>
                 </li>
               </ul>
@@ -150,11 +149,7 @@
             </li>
             <li class="services-images">
               <div class="service-container">
-                <img
-                  src="./images/color-palette.jpg"
-                  alt="service 3"
-                  width="370"
-                />
+                <img src="./images/color-palette.jpg" alt="service 3" width="370" />
                 <h3 class="service-title m-0">SOLUCIONES DE DISEÑO</h3>
               </div>
             </li>
@@ -322,9 +317,7 @@
               <h2 class="logo logo-footer">
                 <a href="./index.html">WebStudio</a>
               </h2>
-              <p class="address-footer">
-                Calz. Ticomán 500, Ciudad de México, CDMX, México
-              </p>
+              <p class="address-footer">Calz. Ticomán 500, Ciudad de México, CDMX, México</p>
               <a href="mailto:info@example.com transition">info@example.com</a>
               <a href="tel:+525555296000 transition">+52 55 5529 6000</a>
             </li>
@@ -359,18 +352,24 @@
               <h3 class="title-footer">SUSCRÍBASE AL BOLETIN INFORMATIVO</h3>
             </li>
             <li>
-              <form action="">
+              <form class="subscribe-form" name="subscribe-form" action="">
                 <label for="email">
-                  Correo Electrónico
-                  <input type="email" id="email" />
+                  <input
+                    type="email"
+                    id="email"
+                    class="subscribe-email"
+                    placeholder="Correo Electrónico"
+                  />
                 </label>
-                <button type="button" class="btn-sol">Suscribase</button>
+                <button type="button" class="subscribe-btn btn-sol">
+                  Suscribase
+                  <svg class="svg-subscribe-form">
+                    <use href="./images/icons/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
               </form>
             </li>
           </ul>
-          <div class="subscribe">
-            <li></li>
-          </div>
         </address>
       </div>
     </footer>
@@ -385,43 +384,42 @@
         </div>
         <div class="main-modal">
           <h3>Deje sus datos, nos contactaremos con usted</h3>
-          <form action="">
-            <ul>
-              <li>
-                <label for="name">
-                  Nombre
-                  <input type="text" name="name" id="name" />
-                </label>
-              </li>
-              <li>
-                <label for="phone">
-                  Teléfono
-                  <input type="tel" name="phone" id="phone" />
-                </label>
-              </li>
-              <li>
-                <label for="email-modal">
-                  E-mail
-                  <input type="email" name="email-modal" id="email-modal" />
-                </label>
-              </li>
-              <li>
-                <label for="comment">
-                  Comentarios
-                  <input type="text" name="comment" id="comment" />
-                </label>
-              </li>
-              <li style="display: flex; gap: 1%; justify-content: center">
-                <input type="checkbox" name="accept" />
-                <p style="font-size: 10px">
-                  Estoy de acuerdo con el boletin informativo y acepto los
-                  Términos y Condiciones
-                </p>
-              </li>
-              <li>
-                <button type="button" class="btn btn-sol">Enviar</button>
-              </li>
-            </ul>
+          <form name="contact-form" action="">
+            <fieldset class="modal-form-group">
+              <label for="name"> Nombre </label>
+              <input
+                class="input-modal-form name"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="./"
+              />
+              <label for="phone"> Teléfono </label>
+              <input class="input-modal-form phone" type="tel" name="phone" id="phone" />
+              <label for="email-modal"> E-mail </label>
+              <input
+                class="input-modal-form email"
+                type="email"
+                name="email-modal"
+                id="email-modal"
+              />
+              <label for="comment"> Comentarios </label>
+              <textarea
+                class="input-modal-form"
+                rows="5"
+                type="text"
+                name="comment"
+                id="comment"
+                placeholder="Introduzca el texto"
+              ></textarea>
+            </fieldset>
+            <fieldset class="modal-send-form-group">
+              <input type="checkbox" name="accept" />
+              <p>Estoy de acuerdo con el boletin informativo y acepto los Términos y Condiciones</p>
+            </fieldset>
+            <fieldset>
+              <button type="button" class="btn btn-sol">Enviar</button>
+            </fieldset>
           </form>
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
   --nav-bg-color: #ececec;
@@ -6,6 +6,7 @@
   --desc-font-color-shadow: rgba(117, 117, 117, 0.2);
   --service-color-shadow: rgba(47, 48, 58, 0.8);
   --modal-fixed-background: rgba(0, 0, 0, 0.5);
+  --modal-font-color: rgba(117, 117, 117, 1);
   --title-font-color: #212121;
   --team-bg-color: #f5f4fa;
   --title-bg-color: #2f303a;
@@ -14,6 +15,8 @@
   --foot-font-color: rgba(255, 255, 255, 0.7);
   --card-portfolio-border: #eeeeee;
   --white: #ffffff;
+  --white-alpha: rgba(255, 255, 255, 0.3);
+  --white-fnt-alpha: rgba(255, 255, 255, 0.6);
   /*Animations*/
   --cubic-bezier-animation: cubic-bezier(0.4, 0, 0.2, 1);
   --time-animation: 250ms;
@@ -25,7 +28,7 @@ body {
   padding: 0px;
   background-color: var(--white);
   color: var(--title-font-color);
-  font-family: "Roboto", "Raleway", sans-serif;
+  font-family: 'Roboto', 'Raleway', sans-serif;
   text-align: center;
 }
 header {
@@ -58,6 +61,9 @@ a:link {
   text-decoration: none;
   background-color: transparent;
 }
+fieldset {
+  border-color: transparent;
+}
 .p-0 {
   padding: 0px 0px;
 }
@@ -75,7 +81,7 @@ a:link {
 
 /*Header*/
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-align: right;
   font-style: normal;
   color: var(--blue-font-color);
@@ -91,7 +97,7 @@ a:link {
   color: var(--blue-font-color);
 }
 .current::after {
-  content: "";
+  content: '';
   position: relative;
   display: inline-block;
   width: 100%;
@@ -148,12 +154,8 @@ a:link {
 /*Main*/
 /*section solution-title*/
 .title {
-  background-image: linear-gradient(
-      180deg,
-      rgba(2, 0, 36, 1),
-      rgba(5, 5, 87, 0.11)
-    ),
-    url("../images/work-group.jpg");
+  background-image: linear-gradient(180deg, rgba(2, 0, 36, 1), rgba(5, 5, 87, 0.11)),
+    url('../images/work-group.jpg');
   background-repeat: no-repeat;
   background-size: 1600px;
   background-position: center;
@@ -174,6 +176,7 @@ a:link {
   align-items: center;
   justify-content: center;
 }
+/*Modal*/
 .modal {
   display: flex;
   flex-direction: column;
@@ -200,6 +203,40 @@ a:link {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.modal-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--modal-font-color);
+  text-align: start;
+}
+.modal-send-form-group {
+  font-weight: 400;
+  font-size: 12px;
+}
+.input-modal-form {
+  width: 448px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color var(--time-animation) var(--cubic-bezier-animation);
+}
+.input-modal-form:hover {
+  border: 1px solid var(--blue-font-color);
+  fill: var(--blue-font-color);
+  cursor: pointer;
+}
+.name {
+  background-image: url('../images/icons/icons.svg#icon-person');
+}
+.mail {
+  background-image: url('../images/icons/icons.svg#icon-mail-black');
+}
+.phone {
+  background-image: url('../images/icons/icons.svg#icon-phone');
 }
 .btn {
   transition: transform var(--time-animation) var(--cubic-bezier-animation);
@@ -328,8 +365,7 @@ a:link {
   display: flex;
   justify-content: center;
   gap: 10px;
-  transition: background-color var(--time-animation)
-    var(--cubic-bezier-animation);
+  transition: background-color var(--time-animation) var(--cubic-bezier-animation);
 }
 .ul-links .social-link {
   display: flex;
@@ -407,7 +443,7 @@ a:link {
   display: flex;
   flex-wrap: wrap;
   width: 231px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -444,6 +480,30 @@ a:link {
 }
 .icon-footer {
   fill: var(--white);
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+.subscribe-email {
+  background-color: transparent;
+  color: var(--white-fnt-alpha);
+  border: 1px solid var(--white-alpha);
+  width: 358px;
+  padding: 15px;
+  border-radius: 4px;
+}
+.subscribe-email:hover {
+  border: 1px solid var(--blue-font-color);
+}
+.subscribe-btn {
+  width: 200px;
+  padding: 10px;
+}
+.svg-subscribe-form {
+  width: 24px;
+  height: 24px;
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*portfolio.html*/
