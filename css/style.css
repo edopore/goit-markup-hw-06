@@ -6,6 +6,7 @@
   --desc-font-color-shadow: rgba(117, 117, 117, 0.2);
   --service-color-shadow: rgba(47, 48, 58, 0.8);
   --modal-fixed-background: rgba(0, 0, 0, 0.5);
+  --modal-svg-round-color: rgba(0, 0, 0, 0.1);
   --modal-font-color: rgba(117, 117, 117, 1);
   --title-font-color: #212121;
   --team-bg-color: #f5f4fa;
@@ -291,13 +292,16 @@ fieldset {
   text-align: center;
   display: flex;
   justify-content: center;
-  border: 1px solid var(--desc-font-color);
+  border: 1px solid var(--modal-svg-round-color);
   position: relative;
   top: 5px;
   right: 5px;
   border-radius: 100%;
   width: 30px;
   height: 30px;
+}
+.btn-close-modal:hover {
+  fill: var(--blue-font-color);
 }
 .svg-close-modal {
   background-color: transparent;
@@ -509,6 +513,7 @@ fieldset {
   align-items: center;
   gap: 1%;
 }
+
 .subscribe-email {
   background-color: transparent;
   color: var(--white-fnt-alpha);
@@ -519,6 +524,10 @@ fieldset {
 }
 .subscribe-email:hover {
   border: 1px solid var(--blue-font-color);
+}
+.subscribe-email:focus {
+  border: 1px solid var(--blue-font-color);
+  color: var(--white);
 }
 .subscribe-btn {
   width: 200px;
