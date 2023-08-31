@@ -385,39 +385,51 @@
         <div class="main-modal">
           <h3>Deje sus datos, nos contactaremos con usted</h3>
           <form name="contact-form" action="">
-            <fieldset class="modal-form-group">
-              <label for="name"> Nombre </label>
-              <input
-                class="input-modal-form name"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="./"
-              />
-              <label for="phone"> Teléfono </label>
-              <input class="input-modal-form phone" type="tel" name="phone" id="phone" />
-              <label for="email-modal"> E-mail </label>
-              <input
-                class="input-modal-form email"
-                type="email"
-                name="email-modal"
-                id="email-modal"
-              />
-              <label for="comment"> Comentarios </label>
-              <textarea
-                class="input-modal-form"
-                rows="5"
-                type="text"
-                name="comment"
-                id="comment"
-                placeholder="Introduzca el texto"
-              ></textarea>
+            <fieldset class="modal-form-group m-0 p-0">
+              <label class="label-rel" for="name">
+                Nombre
+                <input class="input-modal-form name" type="text" name="name" id="name" />
+                <svg class="svg-modal">
+                  <use href="./images/icons/icons.svg#icon-person"></use>
+                </svg>
+              </label>
+              <label class="label-rel" for="phone">
+                Teléfono
+                <input class="input-modal-form phone" type="tel" name="phone" id="phone" />
+                <svg class="svg-modal">
+                  <use href="./images/icons/icons.svg#icon-phone"></use>
+                </svg>
+              </label>
+              <label class="label-rel" for="email-modal">
+                E-mail
+                <input
+                  class="input-modal-form email"
+                  type="email"
+                  name="email-modal"
+                  id="email-modal"
+                />
+                <svg class="svg-modal">
+                  <use href="./images/icons/icons.svg#icon-mail-black"></use>
+                </svg>
+              </label>
+              <label class="label-rel" for="comment">
+                Comentarios
+                <textarea
+                  class="input-modal-form textarea"
+                  rows="5"
+                  type="text"
+                  name="comment"
+                  id="comment"
+                  placeholder="Introduzca el texto"
+                ></textarea>
+              </label>
+              <label class="checkbox-form" for="">
+                <input type="checkbox" name="accept" />
+                <p>
+                  Estoy de acuerdo con el boletin informativo y acepto los Términos y Condiciones
+                </p>
+              </label>
             </fieldset>
-            <fieldset class="modal-send-form-group">
-              <input type="checkbox" name="accept" />
-              <p>Estoy de acuerdo con el boletin informativo y acepto los Términos y Condiciones</p>
-            </fieldset>
-            <fieldset>
               <button type="button" class="btn btn-sol">Enviar</button>
             </fieldset>
           </form>
