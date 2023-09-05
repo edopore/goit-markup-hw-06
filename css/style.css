@@ -467,6 +467,10 @@ fieldset {
   gap: 30px;
 }
 .client-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0px;
   width: 170px;
   border: 1px solid var(--desc-font-color);
   border-radius: 4px;
