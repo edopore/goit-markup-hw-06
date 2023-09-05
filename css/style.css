@@ -260,15 +260,19 @@ fieldset {
 .label-rel:hover > .svg-modal {
   fill: var(--blue-font-color);
 }
+.b-0 {
+  border: 0;
+}
 .checkbox-form {
   display: flex;
   align-items: baseline;
   gap: 10px;
+  padding: 5px 10px;
 }
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url('./images/icons/icons.svg#icon-check');
-  border-color: #2196f3;
-  background-color: #2196f3;
+  background-image: url(../images/icons/iconcheck.svg);
+  border-color: var(--blue-font-color);
+  background-color: var(--blue-font-color);
 }
 .btn {
   transition: transform var(--time-animation) var(--cubic-bezier-animation);
@@ -320,6 +324,37 @@ fieldset {
   top: 5px;
   width: 18px;
   height: 18px;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden;
+}
+.modal-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--desc-font-color);
+  margin-bottom: 30px;
+}
+
+.modal-form-checkbox-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 15px;
+  border: 1px solid green;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 9px;
+  margin-bottom: 20px;
 }
 /*Section values*/
 .values ul {
