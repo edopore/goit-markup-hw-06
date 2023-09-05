@@ -155,7 +155,7 @@ fieldset {
 /*Main*/
 /*section solution-title*/
 .title {
-  background-image: linear-gradient(180deg, rgba(2, 0, 36, 1), rgba(5, 5, 87, 0.11)),
+  background-image: linear-gradient(0deg, rgba(2, 0, 36, 1), rgba(5, 5, 87, 0.11)),
     url('../images/work-group.jpg');
   background-repeat: no-repeat;
   background-size: 1600px;
@@ -222,17 +222,19 @@ fieldset {
 
 .svg-modal {
   position: relative;
-  bottom: 30px;
-  left: 15px;
+  bottom: 25px;
+  right: -15px;
   width: 18px;
   height: 18px;
   transition: fill var(--time-animation) var(--cubic-bezier-animation);
 }
-
+.btn-modal-form {
+  padding: 15px;
+}
 .input-modal-form {
   width: 448px;
   border-radius: 4px;
-  padding: 10px 40px;
+  padding: 5px 40px;
   border: 2px solid rgba(33, 33, 33, 0.2);
   transition: border-color var(--time-animation) var(--cubic-bezier-animation);
 }
@@ -241,14 +243,17 @@ fieldset {
   padding: 10px;
 }
 .input-modal-form:hover {
+  cursor: pointer;
   border: 2px solid var(--blue-font-color);
 }
 .input-modal-form:focus {
   border: 2px solid var(--blue-font-color);
 }
-.input-modal-form:focus + .svg-modal {
-  fill: #2196f3;
+.input-modal-form:focus + .svg-modal,
+.input-modal-form:hover + .svg-modal {
+  fill: var(--blue-font-color);
 }
+
 .label-rel:focus-visible {
   border: 2px solid var(--blue-font-color);
 }
@@ -259,7 +264,11 @@ fieldset {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  padding: 0px 30px;
+}
+.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+  background-image: url('./images/icons/icons.svg#icon-check');
+  border-color: #2196f3;
+  background-color: #2196f3;
 }
 .btn {
   transition: transform var(--time-animation) var(--cubic-bezier-animation);
@@ -270,12 +279,14 @@ fieldset {
 .btn-sol {
   background-color: var(--blue-font-color);
   color: var(--team-bg-color);
-  width: 261px;
+  width: 200px;
+  padding: 10px;
   font-weight: 700;
   line-height: 30px;
 }
 .header-modal {
   width: 100%;
+  height: 0;
   display: flex;
   justify-content: end;
 }
@@ -294,8 +305,8 @@ fieldset {
   justify-content: center;
   border: 1px solid var(--modal-svg-round-color);
   position: relative;
-  top: 5px;
-  right: 5px;
+  top: -3px;
+  right: 3px;
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -546,7 +557,7 @@ fieldset {
   gap: 8px;
 }
 .btn-lst {
-  padding: 10px;
+  padding: 6px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;

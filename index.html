@@ -361,7 +361,7 @@
                     placeholder="Correo Electrónico"
                   />
                 </label>
-                <button type="button" class="subscribe-btn btn-sol">
+                <button type="submit" class="subscribe-btn btn-sol">
                   Suscribase
                   <svg class="svg-subscribe-form">
                     <use href="./images/icons/icons.svg#icon-send"></use>
@@ -423,14 +423,15 @@
                   placeholder="Introduzca el texto"
                 ></textarea>
               </label>
-              <label class="checkbox-form" for="">
-                <input type="checkbox" name="accept" />
-                <p>
+              <fieldset class="checkbox-form">
+                <input type="checkbox" name="accept" class="modal-form-checkbox" />
+                <label class="checkbox-form" for="">
                   Estoy de acuerdo con el boletin informativo y acepto los Términos y Condiciones
-                </p>
-              </label>
+                </label>
+              </fieldset>
             </fieldset>
-              <button type="button" class="btn btn-sol">Enviar</button>
+            <fieldset>
+              <button type="submit" class="btn btn-sol btn-modal-form">Enviar</button>
             </fieldset>
           </form>
         </div>
